@@ -1,0 +1,203 @@
+/* Base styles */
+:root {
+    --main-bg-color: #eceff4;
+    --main-text-color: #2e3440;
+    --accent-color-1: #5e81ac;
+    --accent-color-2: #bf616a;
+    --font-family: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    user-select: none;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.spectrum {
+    position: relative;
+    height: 6px;
+    width: 80%;
+    max-width: 1200px;
+    background-color: var(--main-text-color);
+    margin: 5em 0;
+}
+
+/* Common elements */
+button {
+    font-family: var(--font-family);
+    color: var(--main-text-color);
+    background-color: transparent;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    text-decoration: underline dotted;
+}
+
+button:hover {
+    transform: translate(-50%, -3px);
+}
+
+/* Specific elements */
+.options {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5em;
+}
+
+.range {
+    position: absolute;
+    height: 6px;
+    background-color: var(--main-text-color);
+    top: -130px;
+    transition: top 0.2s ease-in-out;
+}
+
+.range-label {
+    position: relative;
+    top: -30px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+button.range-label:hover {
+    transform: translate(0, -3px);
+}
+
+.tickmark {
+    position: absolute;
+    width: 3px;
+    height: 45px;
+    background-color: var(--main-text-color);
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.tickmark-label {
+    position: absolute;
+    bottom: 50px;
+    transform: translateX(-50%);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.label {
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.philosophers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.philosopher {
+    transition: opacity 0.15 ease-in-out;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    -moz-transition: opacity 0.15s ease-in-out;
+    -o-transition: opacity 0.15s ease-in-out;
+}
+
+.label.top { bottom: calc(100% + 0.5em); }
+.label.bottom { top: calc(100% + 0.5em); }
+
+/* Positioning */
+.radical, .communism { left: 5%; }
+.socialism { left: 30%; }
+.center { left: 50%; }
+.individualism { left: 70%; }
+.reactionary, .fascism { left: 95%; }
+
+.classical-liberalism { 
+    left: 51%; 
+    width: 49%;
+    background-color: var(--accent-color-1);
+}
+
+.modern-liberalism { 
+    left: 30%; 
+    width: 19%;
+    background-color: var(--accent-color-2);
+}
+
+/* Popovers */
+[popover] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.4em;
+    border-radius: 5px;
+    font-family: var(--font-family);
+    max-width: 50%;
+}
+
+[popover] > h2 {
+    padding-bottom: 0.2em;
+}
+
+[popover] > p {
+    font-weight: 500;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    padding-bottom: 0.2em;
+}
+
+[popover]::backdrop {
+    backdrop-filter: blur(3px);
+}
+
+/* Links */
+a {
+    color: var(--accent-color-1);
+}
+
+a:hover {
+    color: #81a1c1;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .spectrum {
+        margin: 4em 0;
+    }
+    
+    .label {
+        padding: 0.3em 0.6em;
+        font-size: 0.9em;
+    }
+    
+    .label.top {
+        bottom: calc(100% + 0.3em);
+    }
+    
+    .label.bottom {
+        top: calc(100% + 0.3em);
+    }
+}

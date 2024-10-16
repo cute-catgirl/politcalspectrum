@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Spectrum</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="options">
+                <input type="checkbox" id="philosopher-checkbox">
+                <label for="philosopher-checkbox">Philosophers</label>
+            </div>
+        </header>
+        <main class="spectrum">
+            <div class="labels">
+                <button class="label top radical tooltip-toggle" popovertarget="popover-radical">Radical</button>
+                <button class="label top center tooltip-toggle" popovertarget="popover-moderate">Moderate</button>
+                <button class="label top reactionary tooltip-toggle" popovertarget="popover-reactionary">Reactionary</button>
+                <button class="label bottom communism tooltip-toggle" popovertarget="popover-communism">Communism</button>
+                <button class="label bottom socialism tooltip-toggle" popovertarget="popover-socialism">Socialism</button>
+                <button class="label bottom individualism tooltip-toggle" popovertarget="popover-individualism">Individualism</button>
+                <button class="label bottom fascism tooltip-toggle" popovertarget="popover-fascism">Fascism</button>
+            </div>
+            <div class="ranges">
+                <div class="range classical-liberalism">
+                    <button class="tooltip-toggle range-label" popovertarget="popover-classical-liberalism">Classical Liberalism</button>
+                </div>
+                <div class="range modern-liberalism">
+                    <button class="tooltip-toggle range-label" popovertarget="popover-modern-liberalism">Modern Liberalism</button>
+                </div>
+            </div>
+            <div class="philosophers">
+                <div class="philosopher tickmark" style="left: 0%;">
+                    <button class="tooltip-toggle tickmark-label" popovertarget="popover-karl-marx">Karl Marx</button>
+                </div>
+                <div class="philosopher tickmark" style="left: 10%;">
+                    <button class="tooltip-toggle tickmark-label" popovertarget="popover-thomas-hobbes">Thomas Hobbes</button>
+                </div>
+                <div class="philosopher tickmark" style="left: 55%;">
+                    <button class="tooltip-toggle tickmark-label" popovertarget="popover-john-locke">John Locke</button>
+                </div>
+                <div class="philosopher tickmark" style="left: 68%;">
+                    <button class="tooltip-toggle tickmark-label"  popovertarget="popover-jean-jacques-rousseau">Jean-Jacques Rousseau</button>
+                </div>
+                <div class="philosopher tickmark" style="left: 75%;">
+                    <button class="tooltip-toggle tickmark-label"  popovertarget="popover-adam-smith">Adam Smith</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div>
+        <div id="popover-radical" popover>
+            <h2>Radicals</h2>
+            <p>A radical is someone on the extreme left of the political spectrum. They typically believe in communism and have a strong desire for change, to the point of being willing to go to extreme measures to attain it.</p>
+        </div>
+        <div id="popover-moderate" popover>
+            <h2>Moderates</h2>
+            <p>A moderate is someone in the middle of the political spectrum. They have little to no prefererence for either side, and don't care about the amount of change being done.</p>
+        </div>
+        <div id="popover-reactionary" popover>
+            <h2>Reactionaries</h2>
+            <p>A reactionary is someone on the extreme right of the politcal spectrum. They hate change and want to preserve traditional values as much as possible, to the point of wanting to "go back in time".</p>
+        </div>
+        <!-- Ideologies -->
+        <div id="popover-communism" popover>
+            <h2>Communism</h2>
+            <p>Communism is an ideology that aims to abolish private property, social classes, and eventually government. It is a response to classical liberalism and aims to create a fair society where everyone is truly equal.</p>
+            <p>There are many different variants of communism but the most popular is marxism, conceptualized by Karl Marx and Friedrich Engels in <a href="https://en.wikisource.org/wiki/Manifesto_of_the_Communist_Party">The Communist Manifesto</a>.</p>
+        </div>
+        <div id="popover-socialism" popover>
+            <h2>Socialism</h2>
+            <p>Socialism is an ideology that argues for more public property and giving control of resources to the government.</p>
+            <p>Although socialism is similar to communism, it doesn't aim to fully abolish private property or social classes.</p>
+        </div>
+        <div id="popover-individualism" popover>
+            <h2>Individualism</h2>
+            <p>Individualism is an ideology that puts emphasis on individuals, prioritizing the individual over the state.</p>
+            <p>It aims to give individuals more freedom and choice, regardless if it is beneficial to society as a whole.</p>
+        </div>
+        <div id="popover-fascism" popover>
+            <h2>Fascism</h2>
+            <p>Fascism is an ideology characterized by ultranationalism, social hierarchy, and suppression of individualism. It promotes an authoritarian government, often led by a single ruling party.</p>
+        </div>
+        <!-- Philosophers -->
+        <div id="popover-karl-marx" popover>
+            <h2>Karl Marx</h2>
+            <p>Karl Marx was a philosopher most well known for conceptualizing Marxism and writing <a href="https://en.wikisource.org/wiki/Manifesto_of_the_Communist_Party">The Communist Manifesto</a>.</p>
+        </div>
+        <div id="popover-thomas-hobbes" popover>
+            <h2>Thomas Hobbes</h2>
+            <p>Thomas Hobbes was a philosopher who believed that humans were inherently violent and selfish. He believed that authority was required, even at the cost of freedom, to maintain order and security.</p>
+        </div>
+        <div id="popover-john-locke" popover>
+            <h2>John Locke</h2>
+            <p>John Locke was a philosopher who believed that humans were not inherently good or bad, but rather born as a blank slate influenced by external factors. While he believed humans had a slight disposition towards being good, he argued that external factors were what ultimately determined a person's beliefs and behaviour.</p>
+        </div>
+        <div id="popover-jean-jacques-rousseau" popover>
+            <h2>Jean-Jacques Rousseau</h2>
+            <p>Jean-Jacques Rousseau was a philosopher who believed that humans were inherently good in their natural state, but developed society and its emphasis on self-interest would corrupt them over time. He believed in a direct democracy, where citizens vote on issues and policies instead of voting for representatives to decide on their behalf.</p>
+        </div>
+        <div id="popover-adam-smith" popover>
+            <h2>Adam Smith</h2>
+            <p>Adam Smith, often called "The Father of Capitalism," was a philosopher known for his ideas about free markets and self-interest. He believed in "The Invisible Hand," the idea that when individuals act in their own self-interest they inevitably end up benefitting society as whole.</p>
+        </div>
+        <!-- Liberalism -->
+         <div id="popover-classical-liberalism" popover>
+            <h2>Classical Liberalism</h2>
+            <p>Classical Liberalism is an ideology that emphasizes individual freedom, free markets, and the rule of law. It was largely a result of the Enlightenment and the growing dissatisfaction of the monarchy.</p>
+         </div>
+         <div id="popover-modern-liberalism" popover>
+            <h2>Modern Liberalism</h2>
+            <p>Modern Liberalism is an ideolgy which builds on Classical Liberalism, still emphaszizing individual freedom but allowing more government intervention in order to reduce inequality.</p>
+         </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
